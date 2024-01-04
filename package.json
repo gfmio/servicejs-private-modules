@@ -1,0 +1,25 @@
+{
+  "exports": null,
+  "files": [],
+  "private": true,
+  "scripts": {
+    "build": "yarn workspace @servicejs-private/modules run build",
+    "dev": "yarn workspace @servicejs-private/modules run dev",
+    "test": "yarn workspace @servicejs-private/modules run test",
+    "typecheck": "yarn workspace @servicejs-private/modules run typecheck",
+    "lint": "prettier --check .",
+    "fmt": "prettier --write .",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.3",
+    "husky": "^8.0.0",
+    "pinst": "^3.0.0",
+    "prettier": "^3.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2"
+  },
+  "workspaces": ["examples/*", "packages/*"]
+}
